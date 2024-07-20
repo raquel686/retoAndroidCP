@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "739982265009",
+    "project_id": "cineplanet-fed14",
+    "storage_bucket": "cineplanet-fed14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739982265009:android:1092c2ed3e22426e3bb090",
+        "android_client_info": {
+          "package_name": "com.project.ecommercecineplanet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739982265009-80imehnibhahvj7re7g603f0vqnt756s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.ecommercecineplanet",
+            "certificate_hash": "e9ac2e60fc94653c06668a886ce611911d3d67bd"
+          }
+        },
+        {
+          "client_id": "739982265009-dgd9qot35qsg7c2vvhk1bih0cg1phenr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxoZcZ8oRckv-fWAutbD-GuvoJXxkcroI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739982265009-dgd9qot35qsg7c2vvhk1bih0cg1phenr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
