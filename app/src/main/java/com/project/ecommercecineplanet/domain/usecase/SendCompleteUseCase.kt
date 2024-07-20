@@ -16,10 +16,10 @@ class SendCompleteUseCase @Inject constructor(private val repository: Cineplanet
                 emit(Resource.Loading())
                 val response=repository.complete(data)
                 Log.i("complete view",response.toString())
-                if (response.isBlank()){
+                if (response.resul_code.isBlank()){
                     emit(Resource.Error("Sin respuesta"))
                 }else{
-                    emit(Resource.Success(response))
+                    emit(Resource.Success(response.resul_code))
                 }
             }catch (e:Error){
                 emit(Resource.Error("Ocurrió un error: ${e.message}"))

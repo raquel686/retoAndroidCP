@@ -3,6 +3,7 @@ package com.project.ecommercecineplanet.data.network
 import com.project.ecommercecineplanet.data.model.CandyItemModel
 import com.project.ecommercecineplanet.data.model.CandyStoreResponse
 import com.project.ecommercecineplanet.data.model.CompleteDto
+import com.project.ecommercecineplanet.data.model.CompleteResponse
 import com.project.ecommercecineplanet.data.model.PremiereModel
 import com.project.ecommercecineplanet.data.model.PremieresResponse
 import retrofit2.Response
@@ -18,7 +19,7 @@ interface ApiClient {
     suspend fun getPremieres(): Response<PremieresResponse>
 
     @POST("complete")
-    suspend fun complete(@Body request: CompleteDto): String
+    suspend fun complete(@Body request: CompleteDto): CompleteResponse
 
 
 

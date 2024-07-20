@@ -2,6 +2,7 @@ package com.project.ecommercecineplanet.data.repository
 
 import com.project.ecommercecineplanet.data.model.CandyItemModel
 import com.project.ecommercecineplanet.data.model.CompleteDto
+import com.project.ecommercecineplanet.data.model.CompleteResponse
 import com.project.ecommercecineplanet.data.model.PremiereModel
 import com.project.ecommercecineplanet.data.network.CineplanetService
 import javax.inject.Inject
@@ -18,7 +19,7 @@ class CineplanetRepository@Inject constructor(
         val response: List<CandyItemModel> = api.getCandyItems().items
         return response
     }
-    suspend fun complete(data: CompleteDto):String{
+    suspend fun complete(data: CompleteDto):CompleteResponse{
         return api.complete(data)
     }
 }

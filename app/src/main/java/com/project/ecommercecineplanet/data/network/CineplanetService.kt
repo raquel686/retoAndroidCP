@@ -3,6 +3,7 @@ package com.project.ecommercecineplanet.data.network
 import com.project.ecommercecineplanet.data.model.CandyItemModel
 import com.project.ecommercecineplanet.data.model.CandyStoreResponse
 import com.project.ecommercecineplanet.data.model.CompleteDto
+import com.project.ecommercecineplanet.data.model.CompleteResponse
 import com.project.ecommercecineplanet.data.model.PremiereModel
 import com.project.ecommercecineplanet.data.model.PremieresResponse
 import kotlinx.coroutines.Dispatchers
@@ -25,7 +26,7 @@ class CineplanetService  @Inject constructor(private val api:ApiClient ){
         }
     }
 
-    suspend fun complete(data: CompleteDto):String{
+    suspend fun complete(data: CompleteDto):CompleteResponse{
         return api.complete(data)
     }
 }
