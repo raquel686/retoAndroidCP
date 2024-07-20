@@ -120,14 +120,20 @@ class PagoFragment : Fragment() {
 
     }
 
+    fun md5(input: String): String {
+        val digest = MessageDigest.getInstance("MD5")
+        val hashBytes = digest.digest(input.toByteArray(Charsets.UTF_8))
+        return hashBytes.joinToString("") { "%02x".format(it) }
+    }
     fun generateAndEncryptString(referenceCode: String, txValue: String): String {
         val apiKey =API_KEY
         val merchantId = MERCHAN_ID
         val currency = "PEN"
 
         val data = "$apiKey~$merchantId~$referenceCode~$txValue~$currency"
+        Log.i("encriptadoMD5", md5(data))
 
-        return md5(data).toString()
+        return md5(data)
     }
     @RequiresApi(Build.VERSION_CODES.O)
     fun getCurrentDateTimeInFormat(): String {

@@ -1,5 +1,6 @@
 package com.project.ecommercecineplanet.domain.usecase
 
+import android.util.Log
 import com.project.ecommercecineplanet.data.model.CandyItemModel
 import com.project.ecommercecineplanet.data.model.CompleteDto
 import com.project.ecommercecineplanet.data.repository.CineplanetRepository
@@ -14,6 +15,7 @@ class SendCompleteUseCase @Inject constructor(private val repository: Cineplanet
             try {
                 emit(Resource.Loading())
                 val response=repository.complete(data)
+                Log.i("complete view",response.toString())
                 if (response.isBlank()){
                     emit(Resource.Error("Sin respuesta"))
                 }else{
